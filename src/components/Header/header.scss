@@ -1,0 +1,13 @@
+.header-root{
+    background-color: #7a0088;
+    color: white;
+}
+.navbar-toggler{
+    color: white !important;
+}
+.right-nav{
+    flex-direction: row;
+    .nav-item{
+        padding: 0rem 0.6rem;
+    }
+}

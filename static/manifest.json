@@ -1,0 +1,26 @@
+{
+    "name": "React PWA",
+    "short_name": "React PWA",
+    "start_url": "/",
+    "theme_color": "#95247b",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Shop the look",
+    "icons": [
+        {
+            "src": "/static/icons/circle_144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/circle_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icons/circle_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
