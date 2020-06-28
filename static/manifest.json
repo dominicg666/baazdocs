@@ -1,24 +1,24 @@
 {
-    "name": "React PWA",
-    "short_name": "React PWA",
+    "name": "Baaz Framework",
+    "short_name": "Baaz",
     "start_url": "/",
-    "theme_color": "#95247b",
+    "theme_color": "#7a0088",
     "display": "standalone",
     "background_color": "#fff",
-    "description": "Shop the look",
+    "description": "Baaz Framework is an open source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like React.",
     "icons": [
         {
-            "src": "/static/icons/circle_144.png",
+            "src": "/static/icons/icon-144x144.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/static/icons/circle_192.png",
+            "src": "/static/icons/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/static/icons/circle_512.png",
+            "src": "/static/icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
