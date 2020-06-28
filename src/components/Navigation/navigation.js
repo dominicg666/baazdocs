@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { shape, string } from 'prop-types';
 import { useNavigation } from '../../Hooks/Navigation/useNavigation';
 import NavHeader from './navHeader';
-import { NavLink, resourceUrl } from '../../drivers/index';
+import { HashRouter, NavLink, resourceUrl } from '../../drivers/index';
 import './navigation.scss';
 
 const Navigation = props => {
@@ -27,17 +27,19 @@ const Navigation = props => {
                 />
             </header>
             <div className={bodyClassName} >
-                <ul className=" navbar-nav">
-                    <li className="nav-item">
-                        <NavLink activeClassName="active" to={resourceUrl('/')} onClick={handleClose} >Overview</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink activeClassName="active" to={resourceUrl('/environment-setup')} onClick={handleClose}>Environment Setup</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink  activeClassName="active" to={resourceUrl('/cli')} onClick={handleClose}>CLI Installation</NavLink>
-                    </li>
-                </ul>
+                <HashRouter basename="/">
+                    <ul className=" navbar-nav">
+                        <li className="nav-item">
+                            <NavLink activeClassName="active" to={resourceUrl('/')} onClick={handleClose} >Overview</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink activeClassName="active" to={resourceUrl('/environment-setup')} onClick={handleClose}>Environment Setup</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink activeClassName="active" to={resourceUrl('/cli')} onClick={handleClose}>CLI Installation</NavLink>
+                        </li>
+                    </ul>
+                </HashRouter>
             </div>
         </aside>
     );
