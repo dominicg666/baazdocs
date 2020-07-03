@@ -15,7 +15,7 @@ const EnvironmentSetup = props => {
                         </p>
                     <h4> Node & npm </h4>
                     <p>
-                        Almost all tooling for modern JavaScript projects is based in Node.js. The <Link to="https://nodejs.org/en/download/">download page</Link> has prebuilt installation packages for all platforms. We recommend selecting the LTS version to ensure best compatibility.
+                        Almost all tooling for modern JavaScript projects is based in Node.js. The <a href="https://nodejs.org/en/download/">download page</a> has prebuilt installation packages for all platforms. We recommend selecting the LTS version to ensure best compatibility.
                         <br />
                         Node is bundled with npm, the package manager for JavaScript.
                         <br />
@@ -34,13 +34,13 @@ const EnvironmentSetup = props => {
                     <p>
                         Although not required, the version control system] Git is highly recommended.
                         <br />
-                        Git is often accompanied by a Git Host, such as <Link to="https://github.com/">GitHub</Link>, in which case additional setup is required. Follow the tutorial from the Git Host's documentation to set up Git:
+                        Git is often accompanied by a Git Host, such as <a href="https://github.com/">GitHub</a>, in which case additional setup is required. Follow the tutorial from the Git Host's documentation to set up Git:
                         <br />
-                        <ul> <li>GitHub: <Link to="https://help.github.com/en/articles/set-up-git">Set up Git</Link></li> <li>GitLab: <Link to="https://docs.gitlab.com/ee/topics/git/how_to_install_git">Installing Git</Link></li> <li>Bitbucket: <Link to="https://www.atlassian.com/git/tutorials/install-git">Install Git</Link></li> </ul>
+                        <ul> <li>GitHub: <a href="https://help.github.com/en/articles/set-up-git">Set up Git</a></li> <li>GitLab: <a href="https://docs.gitlab.com/ee/topics/git/how_to_install_git">Installing Git</a></li> <li>Bitbucket: <a href="https://www.atlassian.com/git/tutorials/install-git">Install Git</a></li> </ul>
 
 
                     </p>
-                    <p>Otherwise, follow the <Link to="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official installation instructions</Link>. The command-line utility can be downloaded from the <Link to="https://git-scm.com/downloads">download page</Link>.</p>
+                    <p>Otherwise, follow the <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official installation instructions</a>. The command-line utility can be downloaded from the <a href="https://git-scm.com/downloads">download page</a>.</p>
 
                     <p>To verify the installation, open a new terminal window and run:</p>
                     <p>

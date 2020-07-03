@@ -14,8 +14,8 @@ const Overview = props => {
                     </p>
                     <h4>Install the Baaz CLI</h4>
                     <p>
-                        Before proceeding, make sure your computer has  <Link to={resourceUrl('/environment-setup')}>Node.js and Yarn</Link> installed.
-                        <Link to={resourceUrl('/environment-setup')}>See these instructions</Link> to set up an environment for Baaz.
+                        Before proceeding, make sure your computer has  <a href={resourceUrl('/environment-setup')}>Node.js and Yarn</a> installed.
+                        <a href={resourceUrl('/environment-setup')}>See these instructions</a> to set up an environment for Baaz.
                         <br />
                         Install the Baaz CLI with npm:
                         <br />
