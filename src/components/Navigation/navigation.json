@@ -1,0 +1,34 @@
+{
+    "navigation": [
+        {
+            "link_name": "Overview",
+            "link": "/"
+        },
+        {
+            "link_name": "Environment Setup",
+            "link": "/environment-setup"
+        },
+        {
+            "link_name": "CLI Installation",
+            "link": "/cli"
+        },
+        {
+            "link_name": "BUI kit",
+            "link": null,
+            "children": [
+                {
+                    "link_name": "Overview",
+                    "link": "/buikit"
+                },
+                {
+                    "link_name": "Accordion",
+                    "link": "/buikit/accordion"
+                },
+                {
+                    "link_name": "Modal",
+                    "link": "/buikit/modal"
+                }
+            ]
+        }
+    ]
+}

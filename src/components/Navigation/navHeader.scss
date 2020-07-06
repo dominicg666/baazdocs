@@ -33,3 +33,16 @@
     padding: 1rem;
     align-self: flex-start;
 }
+.mobile_menuLinks {
+    display: flex !important;
+flex-direction: row;
+justify-content: space-between;
+}
+.mobile_menuLinks span{
+    align-self: end;
+align-content: end;
+
+}
+.mobile_menuLinks + ul {
+    margin-left: 1rem;
+}

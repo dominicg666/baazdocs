@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, Suspense, lazy } from 'react';
 import { array, func, shape, string } from 'prop-types';
-import { useApp } from '@baaz/adapter/talons/App/useApp';
+import { useApp } from '@baaz/adapter/lib/App/useApp';
 import { HeadProvider, Title } from '../Head';
 import Main from '../Main';
 import Mask from '../Mask';

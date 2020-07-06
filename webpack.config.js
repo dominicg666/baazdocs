@@ -20,7 +20,10 @@ module.exports = async env => {
       'redux-thunk'
     ],
     special: {
-
+      'buikit':{
+        esModules: true,
+        cssModules: true
+      },
       '@baaz/adapter': {
         esModules: true,
         cssModules: true

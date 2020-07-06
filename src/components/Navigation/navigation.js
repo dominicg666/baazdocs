@@ -1,9 +1,65 @@
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { shape, string } from 'prop-types';
 import { useNavigation } from '../../Hooks/Navigation/useNavigation';
 import NavHeader from './navHeader';
-import { HashRouter, NavLink, resourceUrl } from '../../drivers/index';
+import { HashRouter, useHistory, resourceUrl, Link } from '../../drivers/index';
+import { useDropdown } from '@baaz/adapter/hooks/useDropdown'
 import './navigation.scss';
+import Icon from 'buikit/lib/Icon';
+import { ChevronDown as ArrowDown, ChevronUp as ArrowUp } from 'react-feather';
+import navigationData from './navigation.json';
+
+
+const ChildNavigationItem = ({
+    item,
+    onClose
+}) => {
+    const history = useHistory();
+    const isChildren = item && item.children || [];
+    const nestedCategoryItem = useMemo(() => (item.children || []).map((item, key) => {
+        return <ChildNavigationItem key={key} item={item} type="child" onClose={onClose} />
+    }), [item])
+
+    const { elementRef, expanded, setExpanded } = useDropdown();
+
+    const toggleIcon = expanded ? ArrowUp : ArrowDown;
+    const hamberger_icon = <Icon src={toggleIcon} />;
+
+    const rootClass = `nav-item`;
+    const activeChild = `navbar-nav`;
+    const activeChildren = `mobile_menuLinks ${isChildren.length > 0 ? 'activeChildren' : ''}`;
+
+    const toggleExpanded = (e) => {
+        if (isChildren.length > 0) {
+            setExpanded(!expanded);
+
+        } else {
+            const productLink = resourceUrl(`${item.link}`);
+            history.push(productLink);
+            onClose();
+        }
+
+        e.preventDefault();
+        e.stopPropagation();
+    };
+
+
+    return (
+        <li
+            className={rootClass}
+            ref={elementRef}
+        >
+            <Link className={activeChildren} onClick={(e) => toggleExpanded(e)} >
+                {item.link_name} {isChildren.length > 0 ? hamberger_icon : null}
+            </Link>
+            {
+                expanded ? (<ul className={activeChild} >
+                    {nestedCategoryItem}
+                </ul>) : null
+            }
+        </li>
+    )
+}
 
 const Navigation = props => {
     const {
@@ -13,10 +69,12 @@ const Navigation = props => {
     } = useNavigation({});
 
 
+
     const rootClassName = isOpen ? `navigation_root_open` : `navigation_root`;
     const modalClassName = hasModal ? `navigation_modal_open` : `navigation_modal`;
     const bodyClassName = hasModal ? `navigation_body_masked` : `navigation_body`;
 
+    console.log(navigationData);
 
 
     return (
@@ -29,15 +87,11 @@ const Navigation = props => {
             <div className={bodyClassName} >
                 <HashRouter basename="/">
                     <ul className=" navbar-nav">
-                        <li className="nav-item">
-                            <NavLink activeClassName="active" to={resourceUrl('/')} onClick={handleClose} >Overview</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink activeClassName="active" to={resourceUrl('/environment-setup')} onClick={handleClose}>Environment Setup</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink activeClassName="active" to={resourceUrl('/cli')} onClick={handleClose}>CLI Installation</NavLink>
-                        </li>
+                        {
+                            navigationData.navigation.map((item, key) => {
+                                return (<ChildNavigationItem key={key} item={item} onClose={handleClose} />)
+                            })
+                        }
                     </ul>
                 </HashRouter>
             </div>
