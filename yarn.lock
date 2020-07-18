@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@baaz/adapter@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@baaz/adapter/-/adapter-1.0.5.tgz#a68b628c6232cd001e50544451b753a7ee50c6e9"
-  integrity sha512-V5hcfbApDxoresQcaLJw6Snw4B2HCdSbi2mK56/HiEicKGFfHa2G98eBFnWjrrz/1aV54BhWPWBmyHs2V+2f6w==
+"@baaz/adapter@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@baaz/adapter/-/adapter-1.0.6.tgz#b8821f593209174edff3be41b3eb6fbe51be753d"
+  integrity sha512-FQqK7Xn7FVJq/RoFXwwJ/9AyK+Iv761iw9A2+jYAylTmm/EPctUAZ2FifHNk50CNBNUN3ctdpbDJFzuKqFzR+A==
   dependencies:
     prop-types "^15.7.2"
     react "~16.13.1"
@@ -2221,10 +2221,10 @@ buikit-drivers@^1.0.1:
     react-redux "^7.2.0"
     react-router-dom "^5.2.0"
 
-buikit@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/buikit/-/buikit-1.0.4.tgz#41c2cf45db6b51d6b0759c4d00a25e0285ba3c0f"
-  integrity sha512-HFZ70F6HBrZ6BUOSmCNVvMp8otYyJHAEqTlUHdqLvIPLtLZREEClet/dklh843HskzuNVEN8HZiNsQzew9QLNQ==
+buikit@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/buikit/-/buikit-1.0.6.tgz#e95d0130294331b997d8d71a89db2240048549fa"
+  integrity sha512-gIr4UYuOO7GbGl2vwKHEvB1EY+H+0tcFfOmhwMqANFuBFfHynkNXnVudZHbKGSFAHPvk5ssSVvNGWX1wNb8s+g==
   dependencies:
     informed "^3.9.0"
     prop-types "^15.7.2"

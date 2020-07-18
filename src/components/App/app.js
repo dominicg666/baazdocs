@@ -33,16 +33,7 @@ const App = props => {
 
     const handleError = useCallback(
         (error, id, loc, handleDismissError) => {
-            const errorToastProps = {
-                icon: ErrorIcon,
-                message: `${ERROR_MESSAGE}\nDebug: ${id} ${loc}`,
-                onDismiss: remove => {
-                    handleDismissError();
-                    remove();
-                },
-                timeout: 15000,
-                type: 'error'
-            };
+            
             //localStorage.clear();
         },
         []
