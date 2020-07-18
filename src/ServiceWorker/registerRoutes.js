@@ -6,6 +6,7 @@ import {
 import { isHTMLRoute } from './Utilities/routeHandler';
 import { THIRTY_DAYS, MAX_NUM_OF_IMAGES_TO_CACHE } from './defaults';
 import { cacheHTMLPlugin } from './Utilities/htmlHandler';
+import { cacheVersion } from '../constants/constants';
 /**
  * registerRoutes function contains all the routes that need to
  * be registered with workbox for caching and proxying.
@@ -46,7 +47,7 @@ export default function () {
     workbox.routing.registerRoute(
         /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
         new workbox.strategies.CacheFirst({
-            cacheName: `images`,
+            cacheName: `images-${cacheVersion}`,
             plugins: [
                 new workbox.expiration.Plugin({
                     maxEntries: MAX_NUM_OF_IMAGES_TO_CACHE, // 60 Images
@@ -64,7 +65,7 @@ export default function () {
     workbox.routing.registerRoute(
         new RegExp(/\.js$/),
         new workbox.strategies.CacheFirst({
-            cacheName: `js`,
+            cacheName: `js-${cacheVersion}`,
         })
     );
 
@@ -75,7 +76,7 @@ export default function () {
         new RegExp(/\.css$/),
         // Use cache but update in the background.
         new workbox.strategies.CacheFirst({
-            cacheName: `css`,
+            cacheName: `css-${cacheVersion}`,
             plugins: [
                 new workbox.expiration.Plugin({
                     maxAgeSeconds: THIRTY_DAYS
