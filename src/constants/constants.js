@@ -1,2 +1,2 @@
 
-export const cacheVersion = '0.1.60';
+export const cacheVersion = '0.1.0';
