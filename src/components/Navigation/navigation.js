@@ -74,7 +74,6 @@ const Navigation = props => {
     const modalClassName = hasModal ? `navigation_modal_open` : `navigation_modal`;
     const bodyClassName = hasModal ? `navigation_body_masked` : `navigation_body`;
 
-    console.log(navigationData);
 
 
     return (
