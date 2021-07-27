@@ -2,7 +2,7 @@ import React, { memo, useMemo } from 'react';
 import { shape, string } from 'prop-types';
 import { useNavigation } from '../../Hooks/Navigation/useNavigation';
 import NavHeader from './navHeader';
-import { HashRouter, useHistory, resourceUrl, Link } from '../../drivers/index';
+import {  useHistory, resourceUrl, Link } from '../../drivers/index';
 import { useDropdown } from '@baaz/adapter/hooks/useDropdown'
 import './navigation.scss';
 import Icon from 'buikit/lib/Icon';
@@ -85,7 +85,6 @@ const Navigation = props => {
                 />
             </header>
             <div className={bodyClassName} >
-                <HashRouter basename="/">
                     <ul className=" navbar-nav">
                         {
                             navigationData.navigation.map((item, key) => {
@@ -93,7 +92,6 @@ const Navigation = props => {
                             })
                         }
                     </ul>
-                </HashRouter>
             </div>
         </aside>
     );

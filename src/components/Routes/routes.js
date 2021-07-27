@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Route, Switch, HashRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 const Overview = lazy(() => import('../Overview'));
 const CLI = lazy(() => import('../Cli'));
@@ -11,7 +11,6 @@ const Modal = lazy(() => import('../buikits/Modal'));
 const Routes = () => {
     return (
         <Suspense fallback={null}>
-            <HashRouter basename="/">
                 <Switch>
                     <Route exact path="/buikit">
                         <BuiKits />
@@ -32,7 +31,6 @@ const Routes = () => {
                         <Overview />
                     </Route>
                 </Switch>
-            </HashRouter>
         </Suspense>
     );
 };

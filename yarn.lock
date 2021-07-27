@@ -2636,10 +2636,8 @@ buikit-drivers@^1.0.1:
     react-redux "^7.2.0"
     react-router-dom "^5.2.0"
 
-buikit@^1.0.6:
+"buikit@file:../buikit":
   version "1.0.6"
-  resolved "https://registry.yarnpkg.com/buikit/-/buikit-1.0.6.tgz#e95d0130294331b997d8d71a89db2240048549fa"
-  integrity sha512-gIr4UYuOO7GbGl2vwKHEvB1EY+H+0tcFfOmhwMqANFuBFfHynkNXnVudZHbKGSFAHPvk5ssSVvNGWX1wNb8s+g==
   dependencies:
     informed "^3.9.0"
     prop-types "^15.7.2"
