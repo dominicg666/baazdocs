@@ -2,10 +2,8 @@
 # yarn lockfile v1
 
 
-"@baaz/adapter@^1.0.6":
+"@baaz/adapter@file:./baaz-adapter":
   version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@baaz/adapter/-/adapter-1.0.6.tgz#b8821f593209174edff3be41b3eb6fbe51be753d"
-  integrity sha512-FQqK7Xn7FVJq/RoFXwwJ/9AyK+Iv761iw9A2+jYAylTmm/EPctUAZ2FifHNk50CNBNUN3ctdpbDJFzuKqFzR+A==
   dependencies:
     prop-types "^15.7.2"
     react "~16.13.1"
@@ -2636,7 +2634,7 @@ buikit-drivers@^1.0.1:
     react-redux "^7.2.0"
     react-router-dom "^5.2.0"
 
-"buikit@file:../buikit":
+"buikit@file:./buikit":
   version "1.0.6"
   dependencies:
     informed "^3.9.0"
