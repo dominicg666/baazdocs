@@ -58,8 +58,8 @@
     "postcss-loader": "^3.0.0",
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-head": "^3.3.0",
     "react-hot-loader": "~4.12.17",
     "react-redux": "^7.2.0",
@@ -80,7 +80,7 @@
     "write-file-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
-    "@baaz/buildpack": "^1.1.2",
+    "@baaz/buildpack": "file:./buildpack",
     "react-feather": "^2.0.8",
     "react-slick": "^0.26.1",
     "react-syntax-highlighter": "^12.2.1"
